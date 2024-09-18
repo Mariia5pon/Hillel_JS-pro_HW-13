@@ -19,7 +19,7 @@
 			<img src="./img/logo.png" alt="Logo">
 			<nav class="header_links">
 				<p>Homework :</p>
-				<a href="#sec-1">13.1. </a>
+				<a href="#sec-1">13.1. Validation with RegEx</a>
 			</nav>
 		</div>
 	</div>
@@ -28,9 +28,39 @@
 	<section class="main-sec-1" id="sec-1">
 		<div class="main-sec-1_content container">
 			<div class="main-sec-1_text">
-				<h2>13.1. </h2>
-				<h4>    </h4>
+				<h2>13.1. Validation with RegEx</h2>
+				<h4>Improve validation for sending messages using regular expressions:</h4>
 				
+				<ul>Fields:
+					
+					<li>Name - required text field</li>
+					<li>Message - a text field of at least 5 characters</li>
+					<li>Phone number - a required field of type phone. Starting with +380</li>
+					<li>Email - email must have @ and a period</li>
+				</ul>
+				<h4>After sending, we display the data entered by the user in the console.</h4>
+				<h4>In case of an error, show it under the field.</h4>
+			</div>
+			<img src="./img/form.png" alt="Form">
+			<button type="button" class="btn" id="open_form">Open form</button>
+			<div class="overlay"></div>
+			<div id="myModal" class="modal">
+				<div class="modal-content">
+					<span class="close">&times;</span>
+					<h2>We would like to help you</h2>
+					<form id="contact_form">
+						<input type="text" id="name" class="input" name="name" placeholder="Name" /><br><br>
+						<span class="error hidden" id="nameError"></span>
+						<textarea id="message" placeholder="Message" class="input"></textarea><br><br>
+						<span class="error hidden" id="messageError"></span>
+						<h4>How to answer you?</h4>
+						<input type="text" id="phone" class="input" placeholder="Phone number"/><br><br>
+						<span class="error hidden" id="phoneError"></span>
+						<input type="email" id="email" name="email" class="input" placeholder="Email"><br><br>
+						<span class="error hidden" id="emailError"></span>
+						<input type="submit" class="submit" value="Send message">
+					</form>
+				</div>
 			</div>
 		</div>
 	</section>
